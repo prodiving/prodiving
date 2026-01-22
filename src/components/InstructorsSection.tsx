@@ -4,21 +4,27 @@ import { Card, CardContent } from "@/components/ui/card";
 const instructors = [
   {
     name: "M. Soworka",
-    title: "Senior Dive Instructor",
-    specialties: ["Open Water", "Advanced", "Rescue"],
+    title: "Course Director",
+    specialties: ["Drinking", "Drinking", "Drinking"],
+    experience: "15+ Years",
+  },
+   {
+    name: "Bas",
+    title: "Course Director",
+    specialties: ["Open Water Intructor", "Advanced", "Rescue"],
     experience: "15+ Years",
   },
   {
-    name: "Mr. B",
+    name: "Mr. Peter",
     title: "PADI Instructor",
     specialties: ["Technical Diving", "Deep Dives", "Night Dives"],
-    experience: "12+ Years",
+    experience: "14+ Years",
   },
   {
-    name: "Peter Greaney",
-    title: "Dive Master",
-    specialties: ["Beginner Courses", "Snorkeling", "Fun Dives"],
-    experience: "10+ Years",
+    name: "Mr Diver",
+    title: "Master Diver",
+    specialties: ["Beginner Courses", "Pro Courses", "Fun Dives"],
+    experience: "15+ Years",
   },
 ];
 
