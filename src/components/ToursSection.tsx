@@ -94,7 +94,7 @@ const ToursSection = () => {
                   className="w-full mt-6 bg-primary hover:bg-primary/90"
                   asChild
                 >
-                  <a href={`mailto:bas@divepro.asia?subject=Tour Inquiry: ${tour.title}`}>
+                  <a href={`mailto:bas@prodiving.asia?subject=Tour Inquiry: ${tour.title}`}>
                     Book This Tour
                   </a>
                 </Button>
