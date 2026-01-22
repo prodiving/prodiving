@@ -27,7 +27,7 @@ const Header = () => {
                 Pro Diving Asia
               </span>
               <span className="text-primary-foreground/80 text-xs font-light tracking-wider">
-                Pro Divers in Aia
+                Go Pro in Asia
               </span>
             </div>
           </a>
