@@ -22,7 +22,7 @@ const ContactSection = () => {
 
     const subject = `Contact Form: ${formData.name}`;
     const body = `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`;
-    window.location.href = `mailto:bas@divepro.asia?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = `mailto:bas@prodiving.asia?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   };
 
   return (
@@ -51,10 +51,10 @@ const ContactSection = () => {
               <div>
                 <h3 className="font-heading font-bold text-foreground mb-1">Email</h3>
                 <a
-                  href="mailto:bas@divepro.asia"
+                  href="mailto:bas@prodiving.asia"
                   className="text-primary hover:text-primary/80 transition-colors"
                 >
-                  bas@divepro.asia
+                  bas@prodiving.asia
                 </a>
               </div>
             </div>

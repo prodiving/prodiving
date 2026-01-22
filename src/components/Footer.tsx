@@ -28,11 +28,11 @@ const Footer = () => {
           <div>
             <div className="flex items-center gap-2 mb-4">
               <div className="w-10 h-10 rounded-full bg-primary-foreground/20 flex items-center justify-center">
-                <span className="text-primary-foreground font-heading font-bold text-xl">D</span>
+                <span className="text-primary-foreground font-heading font-bold text-xl">P</span>
               </div>
               <div className="flex flex-col">
                 <span className="text-primary-foreground font-heading font-bold text-xl">
-                  DivePro
+                  ProDiving
                 </span>
                 <span className="text-primary-foreground/80 text-xs tracking-wider">
                   ASIA
@@ -90,11 +90,11 @@ const Footer = () => {
             </h4>
             <div className="space-y-4">
               <a
-                href="mailto:bas@divepro.asia"
+                href="mailto:bas@prodiving.asia"
                 className="flex items-center gap-2 text-primary-foreground/80 hover:text-primary-foreground text-sm transition-colors"
               >
                 <Mail className="w-4 h-4" />
-                bas@divepro.asia
+                bas@prodiving.asia
               </a>
               <div className="p-4 bg-primary-foreground/10 rounded-lg">
                 <p className="text-primary-foreground text-sm font-medium mb-1">
@@ -118,7 +118,7 @@ const Footer = () => {
         <div className="pt-8 border-t border-primary-foreground/20">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-primary-foreground/70 text-sm">
-              © {currentYear} DivePro Asia. All rights reserved.
+              © Copyright One Media Asia | Pro Diving Asia
             </p>
             <p className="text-primary-foreground/70 text-sm flex items-center gap-1">
               Made with <Heart className="w-4 h-4 text-coral fill-coral" /> in Thailand

@@ -20,11 +20,11 @@ const Header = () => {
           {/* Logo */}
           <a href="#home" className="flex items-center gap-2">
             <div className="w-10 h-10 rounded-full bg-primary-foreground/20 flex items-center justify-center">
-              <span className="text-primary-foreground font-heading font-bold text-xl">D</span>
+              <span className="text-primary-foreground font-heading font-bold text-xl">P</span>
             </div>
             <div className="flex flex-col">
               <span className="text-primary-foreground font-heading font-bold text-xl tracking-tight">
-                DivePro
+                ProDiving
               </span>
               <span className="text-primary-foreground/80 text-xs font-light tracking-wider">
                 ASIA
@@ -48,11 +48,11 @@ const Header = () => {
           {/* Contact Info Desktop */}
           <div className="hidden lg:flex items-center gap-4">
             <a
-              href="mailto:bas@divepro.asia"
+              href="mailto:bas@prodiving.asia"
               className="flex items-center gap-2 text-primary-foreground/90 hover:text-primary-foreground text-sm transition-colors"
             >
               <Mail className="w-4 h-4" />
-              bas@divepro.asia
+              bas@prodiving.asia
             </a>
           </div>
 
@@ -82,11 +82,11 @@ const Header = () => {
                 </a>
               ))}
               <a
-                href="mailto:bas@divepro.asia"
+                href="mailto:bas@prodiving.asia"
                 className="flex items-center gap-2 text-primary-foreground/90 text-sm pt-4 border-t border-primary-foreground/20"
               >
                 <Mail className="w-4 h-4" />
-                bas@divepro.asia
+                bas@prodiving.asia
               </a>
             </div>
           </nav>

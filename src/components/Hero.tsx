@@ -21,7 +21,7 @@ const Hero = () => {
           </p>
           
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-heading font-bold text-primary-foreground mb-6 leading-tight animate-fade-in" style={{ animationDelay: "0.1s" }}>
-            DivePro
+            ProDiving
             <span className="block text-3xl md:text-4xl lg:text-5xl font-light mt-2 text-primary-foreground/90">
               Asia
             </span>
