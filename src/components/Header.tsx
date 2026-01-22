@@ -24,10 +24,10 @@ const Header = () => {
             </div>
             <div className="flex flex-col">
               <span className="text-primary-foreground font-heading font-bold text-xl tracking-tight">
-                Pro Diving Asia
+                DivePro
               </span>
               <span className="text-primary-foreground/80 text-xs font-light tracking-wider">
-                Go Pro in Asia
+                ASIA
               </span>
             </div>
           </a>
@@ -48,11 +48,11 @@ const Header = () => {
           {/* Contact Info Desktop */}
           <div className="hidden lg:flex items-center gap-4">
             <a
-              href="mailto:bas@prodiving.asia"
+              href="mailto:bas@divepro.asia"
               className="flex items-center gap-2 text-primary-foreground/90 hover:text-primary-foreground text-sm transition-colors"
             >
               <Mail className="w-4 h-4" />
-              bas@prodiving.asia
+              bas@divepro.asia
             </a>
           </div>
 
@@ -82,11 +82,12 @@ const Header = () => {
                 </a>
               ))}
               <a
-                href="mailto:bas@prodiving.asia
+                href="mailto:bas@divepro.asia"
                 className="flex items-center gap-2 text-primary-foreground/90 text-sm pt-4 border-t border-primary-foreground/20"
               >
                 <Mail className="w-4 h-4" />
-bas@prodiving.asia              </a>
+                bas@divepro.asia
+              </a>
             </div>
           </nav>
         )}

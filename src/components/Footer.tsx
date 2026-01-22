@@ -118,10 +118,10 @@ const Footer = () => {
         <div className="pt-8 border-t border-primary-foreground/20">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-primary-foreground/70 text-sm">
-              © {currentYear} Managed by One Media Asia | Pro Diving Asia. All rights reserved.
+              © {currentYear} DivePro Asia. All rights reserved.
             </p>
             <p className="text-primary-foreground/70 text-sm flex items-center gap-1">
-              Made with <Heart className="w-4 h-4 text-coral fill-coral" /> by One MediaAsia in Thailand
+              Made with <Heart className="w-4 h-4 text-coral fill-coral" /> in Thailand
             </p>
           </div>
         </div>
