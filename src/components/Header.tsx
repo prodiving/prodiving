@@ -52,7 +52,7 @@ const Header = () => {
               className="flex items-center gap-2 text-primary-foreground/90 hover:text-primary-foreground text-sm transition-colors"
             >
               <Mail className="w-4 h-4" />
-              bas@divepro.asia
+              bas@prodiving.asia
             </a>
           </div>
 
