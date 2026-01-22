@@ -27,7 +27,7 @@ const Header = () => {
                 Pro Diving Asia
               </span>
               <span className="text-primary-foreground/80 text-xs font-light tracking-wider">
-                ASIA
+                Pro Divers in Aia
               </span>
             </div>
           </a>
@@ -48,7 +48,7 @@ const Header = () => {
           {/* Contact Info Desktop */}
           <div className="hidden lg:flex items-center gap-4">
             <a
-              href="mailto:bas@divepro.asia"
+              href="mailto:bas@prodiving.asia"
               className="flex items-center gap-2 text-primary-foreground/90 hover:text-primary-foreground text-sm transition-colors"
             >
               <Mail className="w-4 h-4" />
@@ -82,12 +82,11 @@ const Header = () => {
                 </a>
               ))}
               <a
-                href="mailto:bas@divepro.asia"
+                href="mailto:bas@prodiving.asia
                 className="flex items-center gap-2 text-primary-foreground/90 text-sm pt-4 border-t border-primary-foreground/20"
               >
                 <Mail className="w-4 h-4" />
-                bas@divepro.asia
-              </a>
+bas@prodiving.asia              </a>
             </div>
           </nav>
         )}
