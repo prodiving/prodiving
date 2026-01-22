@@ -1,5 +1,4 @@
-import { useState, useEffect } from "react";
-import { Bed, Wind, Wifi, Droplets, Star } from "lucide-react";
+import { Wind } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -36,18 +35,14 @@ const rooms = [{
   badge: "Best Value",
   image: 4
 }];
-const attractiveImages = ["https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&h=500&fit=crop&crop=face", "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=400&h=500&fit=crop&crop=face", "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=400&h=500&fit=crop&crop=face", "https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?w=400&h=500&fit=crop&crop=face", "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=400&h=500&fit=crop&crop=face", "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=400&h=500&fit=crop&crop=face"];
+const roomImages: Record<number, string> = {
+  1: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=400&h=500&fit=crop", // Standard room
+  2: "https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=400&h=500&fit=crop", // Deluxe room
+  3: "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=400&h=500&fit=crop", // Superior room
+  4: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=400&h=500&fit=crop", // Luxury suite
+};
+
 const RoomsSection = () => {
-  const [currentImages, setCurrentImages] = useState<Record<number, string>>({});
-  useEffect(() => {
-    // Assign random images to each room
-    const shuffled = [...attractiveImages].sort(() => Math.random() - 0.5);
-    const imageMap: Record<number, string> = {};
-    rooms.forEach((room, index) => {
-      imageMap[room.id] = shuffled[index % shuffled.length];
-    });
-    setCurrentImages(imageMap);
-  }, []);
   return <section id="rooms" className="py-24 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-2xl mx-auto mb-16">
@@ -73,7 +68,7 @@ const RoomsSection = () => {
         }}>
               <CardHeader className="p-0 relative">
                 <div className="aspect-[4/5] overflow-hidden">
-                  <img src={currentImages[room.id] || attractiveImages[0]} alt={`${room.name} - Hostess`} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                  <img src={roomImages[room.id]} alt={room.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                 </div>
                 {room.badge && <Badge className="absolute top-4 right-4 bg-accent text-accent-foreground font-semibold">
                     {room.badge}
