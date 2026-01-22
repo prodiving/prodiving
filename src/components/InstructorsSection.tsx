@@ -6,7 +6,7 @@ const instructors = [
    {
     name: "Bas",
     title: "Course Director",
-    specialties: "No 1 Course Director in Asia", "Advanced Womanizer", "Rescue"],
+    specialties: ["No 1 Course Director in Asia", "Advanced Womanizer", "Rescue"],
     experience: "15+ Years",
   },
    {
