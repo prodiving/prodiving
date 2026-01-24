@@ -97,7 +97,7 @@ const Footer = () => {
                 bas@prodiving.asia
               </a>
               <a
-                href="https://wa.me/66898547841"
+                href="https://wa.me/+31638697279"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-primary-foreground/80 hover:text-primary-foreground text-sm transition-colors"
