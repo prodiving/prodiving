@@ -21,12 +21,7 @@ const instructors = [
     specialties: ["Technical Diving", "Deep Dives", "Night Dives"],
     experience: "14+ Years",
   },
-  {
-    name: "Mr Diver",
-    title: "Master Diver",
-    specialties: ["Beginner Courses", "Pro Courses", "Fun Dives"],
-    experience: "15+ Years",
-  },
+ 
 ];
 
 const InstructorsSection = () => {
