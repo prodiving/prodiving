@@ -19,9 +19,11 @@ const Header = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <a href="#home" className="flex items-center gap-2">
-            <div className="w-10 h-10 rounded-full bg-primary-foreground/20 flex items-center justify-center">
-              <span className="text-primary-foreground font-heading font-bold text-xl">P</span>
-            </div>
+            <img 
+              src="https://divinginasia.com/images/logo.avif" 
+              alt="Pro Diving Logo" 
+              className="h-10 w-auto"
+            />
             <div className="flex flex-col">
               <span className="text-primary-foreground font-heading font-bold text-xl tracking-tight">
                 Pro Diving in Asia with Bas
