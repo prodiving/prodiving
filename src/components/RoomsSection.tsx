@@ -95,7 +95,7 @@ const RoomsSection = () => {
                   <span className="text-muted-foreground text-sm">/night</span>
                 </div>
                 <Button size="sm" className="bg-primary hover:bg-primary/90" asChild>
-                  <a href="mailto:bas@divepro.asia?subject=Room Booking: {{room.name}}">
+                  <a href="mailto:bas@prodiving.asia?subject=Room Booking: {{room.name}}">
                     Book Now
                   </a>
                 </Button>
