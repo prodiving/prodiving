@@ -6,18 +6,16 @@ const Footer = () => {
   const quickLinks = [
     { href: "#home", label: "Home" },
     { href: "#rooms", label: "Accommodation" },
-    { href: "#tours", label: "Daily Tours" },
     { href: "#instructors", label: "Our Team" },
     { href: "#contact", label: "Contact" },
   ];
 
   const activities = [
-    "Island Hopping",
-    "Fishing Trips",
-    "Beach Tours",
-    "Bike Rental",
     "Snorkeling",
     "Diving Courses",
+    "PADI Certification",
+    "Fun Dives",
+    "Discover Scuba",
   ];
 
   return (
@@ -101,16 +99,16 @@ const Footer = () => {
               </a>
               <div className="p-4 bg-primary-foreground/10 rounded-lg">
                 <p className="text-primary-foreground text-sm font-medium mb-1">
-                  All Tours Include
+                  Professional Diving
                 </p>
                 <p className="text-primary-foreground/80 text-xs">
-                  ✓ Insurance Coverage
+                  ✓ PADI Certified Instructors
                 </p>
                 <p className="text-primary-foreground/80 text-xs">
-                  ✓ Professional Instructors
+                  ✓ Quality Equipment
                 </p>
                 <p className="text-primary-foreground/80 text-xs">
-                  ✓ Equipment & Gear
+                  ✓ Small Group Sizes
                 </p>
               </div>
             </div>
