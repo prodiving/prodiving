@@ -1,4 +1,4 @@
-import { Mail, MapPin, Phone, Clock, Lock } from "lucide-react";
+import { Mail, MapPin, Clock, Lock, Facebook, Instagram, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -83,12 +83,43 @@ const ContactSection = () => {
               </div>
             </div>
 
+            {/* Social Media */}
+            <div className="p-6 bg-card rounded-2xl shadow-card">
+              <h4 className="font-heading font-bold text-foreground mb-4">Follow Us</h4>
+              <div className="flex items-center gap-4">
+                <a
+                  href="https://facebook.com/prodivingasia"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 rounded-full gradient-ocean flex items-center justify-center hover:opacity-80 transition-opacity"
+                >
+                  <Facebook className="w-5 h-5 text-primary-foreground" />
+                </a>
+                <a
+                  href="https://instagram.com/prodivingasia"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 rounded-full gradient-ocean flex items-center justify-center hover:opacity-80 transition-opacity"
+                >
+                  <Instagram className="w-5 h-5 text-primary-foreground" />
+                </a>
+                <a
+                  href="https://wa.me/+31638697279"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 rounded-full gradient-ocean flex items-center justify-center hover:opacity-80 transition-opacity"
+                >
+                  <MessageCircle className="w-5 h-5 text-primary-foreground" />
+                </a>
+              </div>
+            </div>
+
             <div className="p-6 bg-card rounded-2xl shadow-card">
               <h4 className="font-heading font-bold text-foreground mb-3">Quick Facts</h4>
               <ul className="space-y-2 text-sm text-muted-foreground">
                 <li className="flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-tropical" />
-                  All tours include insurance
+                  PADI 5-Star Dive Center
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-tropical" />
@@ -100,7 +131,7 @@ const ContactSection = () => {
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-tropical" />
-                  Daily tours & activities
+                  Small group sizes
                 </li>
               </ul>
             </div>
