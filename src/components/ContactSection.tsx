@@ -114,6 +114,7 @@ const ContactSection = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-10 h-10 rounded-full gradient-ocean flex items-center justify-center hover:opacity-80 transition-opacity"
+                  aria-label="Visit our Facebook page"
                 >
                   <Facebook className="w-5 h-5 text-primary-foreground" />
                 </a>
@@ -122,6 +123,7 @@ const ContactSection = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-10 h-10 rounded-full gradient-ocean flex items-center justify-center hover:opacity-80 transition-opacity"
+                  aria-label="Visit our Instagram page"
                 >
                   <Instagram className="w-5 h-5 text-primary-foreground" />
                 </a>
@@ -130,6 +132,7 @@ const ContactSection = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-10 h-10 rounded-full gradient-ocean flex items-center justify-center hover:opacity-80 transition-opacity"
+                  aria-label="Contact us on WhatsApp"
                 >
                   <MessageCircle className="w-5 h-5 text-primary-foreground" />
                 </a>
@@ -239,6 +242,7 @@ const ContactSection = () => {
                     value={`Subject: Contact Form: ${formData.name}\n\n${formData.message}`}
                     className="w-full rounded-md border px-3 py-2 text-sm"
                     rows={6}
+                    aria-label="Your message to copy"
                   />
                   <div className="mt-2">
                     <Button size="sm" variant="outline" onClick={() => copyToClipboard(`Subject: Contact Form: ${formData.name}\n\n${formData.message}`)}>
