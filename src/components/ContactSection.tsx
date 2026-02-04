@@ -50,7 +50,17 @@ const ContactSection = () => {
       setTimeout(() => setSuccessMessage(""), 5000);
     } catch (error) {
       console.error("Failed to send email:", error);
-      setIsFallbackOpen(true);
+      
+      // Fallback: Open Gmail with compose
+      const subject = `Contact Form: ${formData.name}`;
+      const body = `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`;
+      const gmailUrl = `https://mail.google.com/mail/?view=cm&to=bas@prodiving.asia&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      
+      // Try to open Gmail in new tab
+      window.open(gmailUrl, '_blank');
+      
+      // Show fallback dialog as secondary option
+      setTimeout(() => setIsFallbackOpen(true), 500);
     } finally {
       setIsLoading(false);
     }
