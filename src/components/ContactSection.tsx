@@ -51,8 +51,8 @@ const ContactSection = () => {
       setIsLoading(false);
     } catch (error) {
       console.error("EmailJS failed:", error);
-      // Always show fallback dialog if EmailJS fails
       setIsLoading(false);
+      // Show fallback dialog with manual options
       setIsFallbackOpen(true);
     }
   };
@@ -281,13 +281,17 @@ const ContactSection = () => {
                 </div>
               </div>
 
-              <DialogFooter className="mt-4 flex gap-2">
-                <Button asChild className="flex-1">
-                  <a href={`mailto:bas@prodiving.asia?subject=${encodeURIComponent(`Contact Form: ${formData.name}`)}&body=${encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`)}`}>
-                    📧 Open Mail Client
-                  </a>
-                </Button>
-                <Button variant="ghost" onClick={() => setIsFallbackOpen(false)}>Close</Button>
+              <DialogFooter className="mt-4 flex flex-col gap-2">
+                <p className="text-sm text-muted-foreground mb-2">Please copy this message and send it to: <strong>bas@prodiving.asia</strong></p>
+                <div className="space-y-2">
+                  <Button size="sm" variant="outline" onClick={() => copyToClipboard("bas@prodiving.asia")} className="w-full">
+                    📋 Copy Email Address
+                  </Button>
+                  <Button size="sm" variant="outline" onClick={() => copyToClipboard(`Subject: Contact Form: ${formData.name}\n\nName: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`)} className="w-full">
+                    📋 Copy Full Message
+                  </Button>
+                </div>
+                <Button variant="ghost" onClick={() => setIsFallbackOpen(false)} className="w-full">Close</Button>
               </DialogFooter>
             </DialogContent>
           </Dialog>
