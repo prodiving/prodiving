@@ -13,8 +13,8 @@ import {
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
 
-// Initialize EmailJS (replace with your public key)
-emailjs.init("YOUR_EMAILJS_PUBLIC_KEY");
+// Initialize EmailJS
+emailjs.init("lPmDz0peiFD5rZv0L");
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -33,8 +33,8 @@ const ContactSection = () => {
 
     try {
       await emailjs.send(
-        "YOUR_SERVICE_ID", // Replace with your EmailJS service ID
-        "YOUR_TEMPLATE_ID", // Replace with your EmailJS template ID
+        "service_s5w9n1n",
+        "template_1dhiaga",
         {
           from_name: formData.name,
           from_email: formData.email,
