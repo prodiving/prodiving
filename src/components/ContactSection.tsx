@@ -48,21 +48,12 @@ const ContactSection = () => {
       
       // Clear success message after 5 seconds
       setTimeout(() => setSuccessMessage(""), 5000);
-    } catch (error) {
-      console.error("Failed to send email:", error);
-      
-      // Fallback: Open Gmail with compose
-      const subject = `Contact Form: ${formData.name}`;
-      const body = `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`;
-      const gmailUrl = `https://mail.google.com/mail/?view=cm&to=bas@prodiving.asia&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-      
-      // Try to open Gmail in new tab
-      window.open(gmailUrl, '_blank');
-      
-      // Show fallback dialog as secondary option
-      setTimeout(() => setIsFallbackOpen(true), 500);
-    } finally {
       setIsLoading(false);
+    } catch (error) {
+      console.error("EmailJS failed:", error);
+      // Always show fallback dialog if EmailJS fails
+      setIsLoading(false);
+      setIsFallbackOpen(true);
     }
   };
 
@@ -256,9 +247,9 @@ const ContactSection = () => {
           <Dialog open={isFallbackOpen} onOpenChange={setIsFallbackOpen}>
             <DialogContent>
               <DialogHeader>
-                <DialogTitle>Mail Client Not Detected?</DialogTitle>
+                <DialogTitle>Send Your Message</DialogTitle>
                 <DialogDescription>
-                  If your mail application didn't open, you can copy the message and send it manually, or click the link to open your mail client.
+                  Please use one of these options to send your message to bas@prodiving.asia
                 </DialogDescription>
               </DialogHeader>
 
@@ -290,9 +281,11 @@ const ContactSection = () => {
                 </div>
               </div>
 
-              <DialogFooter className="mt-4">
-                <Button asChild>
-                  <a href={`mailto:bas@prodiving.asia?subject=${encodeURIComponent(`Contact Form: ${formData.name}`)}&body=${encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`)}`}>Open Mail Client</a>
+              <DialogFooter className="mt-4 flex gap-2">
+                <Button asChild className="flex-1">
+                  <a href={`mailto:bas@prodiving.asia?subject=${encodeURIComponent(`Contact Form: ${formData.name}`)}&body=${encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`)}`}>
+                    📧 Open Mail Client
+                  </a>
                 </Button>
                 <Button variant="ghost" onClick={() => setIsFallbackOpen(false)}>Close</Button>
               </DialogFooter>
