@@ -9,8 +9,10 @@ const LiveChat = () => {
 
   const handleSend = () => {
     if (message.trim()) {
-      // Open email with the message
-      window.location.href = `mailto:bas@prodiving.asia?subject=Live Chat Message&body=${encodeURIComponent(message)}`;
+      // Open email with the message (encode subject and body)
+      const subject = encodeURIComponent("Live Chat Message");
+      const body = encodeURIComponent(message);
+      window.location.href = `mailto:bas@prodiving.asia?subject=${subject}&body=${body}`;
       setMessage("");
       setIsOpen(false);
     }
