@@ -11,6 +11,10 @@ import {
   DialogFooter,
 } from "@/components/ui/dialog";
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
+
+// Initialize EmailJS (replace with your public key)
+emailjs.init("YOUR_EMAILJS_PUBLIC_KEY");
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -20,22 +24,36 @@ const ContactSection = () => {
   });
 
   const [isFallbackOpen, setIsFallbackOpen] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [successMessage, setSuccessMessage] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setIsLoading(true);
 
-    const subject = `Contact Form: ${formData.name}`;
-    const body = `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`;
-    const mailto = `mailto:bas@prodiving.asia?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    // Attempt to open the user's mail client. If it doesn't open, show fallback dialog.
     try {
-      window.location.href = mailto;
-    } catch (err) {
-      // ignore: some browsers may throw when opening mailto
+      await emailjs.send(
+        "YOUR_SERVICE_ID", // Replace with your EmailJS service ID
+        "YOUR_TEMPLATE_ID", // Replace with your EmailJS template ID
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          message: formData.message,
+          to_email: "bas@prodiving.asia",
+        }
+      );
+      
+      setSuccessMessage("Message sent successfully! We'll get back to you soon.");
+      setFormData({ name: "", email: "", message: "" });
+      
+      // Clear success message after 5 seconds
+      setTimeout(() => setSuccessMessage(""), 5000);
+    } catch (error) {
+      console.error("Failed to send email:", error);
+      setIsFallbackOpen(true);
+    } finally {
+      setIsLoading(false);
     }
-
-    // Show fallback after short delay so user can dismiss if mail client opened
-    setTimeout(() => setIsFallbackOpen(true), 1100);
   };
 
   const copyToClipboard = async (text: string) => {
@@ -164,6 +182,12 @@ const ContactSection = () => {
 
           {/* Contact Form */}
           <form onSubmit={handleSubmit} className="space-y-6">
+            {successMessage && (
+              <div className="p-4 bg-green-100 border border-green-300 text-green-800 rounded-lg">
+                {successMessage}
+              </div>
+            )}
+            
             <div>
               <label className="block text-sm font-medium text-foreground mb-2">
                 Your Name
@@ -174,6 +198,7 @@ const ContactSection = () => {
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                 placeholder="John Doe"
                 required
+                disabled={isLoading}
                 className="w-full"
               />
             </div>
@@ -188,6 +213,7 @@ const ContactSection = () => {
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                 placeholder="john@example.com"
                 required
+                disabled={isLoading}
                 className="w-full"
               />
             </div>
@@ -201,6 +227,7 @@ const ContactSection = () => {
                 onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                 placeholder="Tell us about your plans..."
                 required
+                disabled={isLoading}
                 rows={4}
                 className="w-full resize-none"
               />
@@ -209,9 +236,10 @@ const ContactSection = () => {
             <Button
               type="submit"
               size="lg"
+              disabled={isLoading}
               className="w-full bg-primary hover:bg-primary/90 font-heading font-semibold"
             >
-              Send Message
+              {isLoading ? "Sending..." : "Send Message"}
             </Button>
           </form>
 
