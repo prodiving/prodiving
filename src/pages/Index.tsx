@@ -1,7 +1,8 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import DivingCoursesSection from "@/components/DivingCoursesSection";
-import InstructorsSection from "@/components/InstructorsSection";
+import DiveSitesSection from "@/components/DiveSitesSection";
+import GallerySection from "@/components/GallerySection";
 import FAQSection from "@/components/FAQSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
@@ -13,7 +14,8 @@ const Index = () => {
       <Header />
       <Hero />
       <DivingCoursesSection />
-      <InstructorsSection />
+      <DiveSitesSection />
+      <GallerySection />
       <FAQSection />
       <ContactSection />
       <Footer />
